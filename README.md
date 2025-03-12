@@ -24,8 +24,51 @@ cd library-book-management
 
 # CORRER SIN BASE DE DATOS
 
+## 🛠 Backend (Spring Boot)
 
+### 1️⃣ Requisitos Previos
+Asegúrate de tener instalado:
+- Java 17 o superior 
+- Maven
 
+### 2️⃣ Ejecutar el Backend
+```bash
+cd backend
+mvn spring-boot:run
+```
+
+Si todo está bien, se mostrara en consola algo asi:
+
+```bash
+Tomcat started on port(s): 8080
+```
+
+Prueba que la API funciona accediendo a:
+http://localhost:8080/api/books
+
+## 🎨 Frontend (React con Vite)
+
+### 1️⃣ Requisitos Previos
+Asegúrate de tener instalado:
+- Node.js
+
+### 2️⃣ Configurar el Frontend
+En el root del proyecto FUERA DE LA CARPETA DE BACKEND correr:
+```bash
+npm install
+```
+
+### 3️⃣ Ejecutar el Frontend
+```bash
+npm run dev
+```
+
+Esto levantará el frontend en http://localhost:5173
+
+## 🧪 Probar la Aplicación Completa
+1. Asegúrate de que el backend (`mvn spring-boot:run`) y el frontend (`npm run dev`) están corriendo.
+2. Abre el navegador y accede a:
+   http://localhost:5173
 
 
 # CORRER CON BASE DE DATOS
@@ -34,10 +77,10 @@ cd library-book-management
 
 ### 1️⃣ Requisitos Previos
 Asegúrate de tener instalado:
-- Java 17 o superior ([Descargar JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html))
-- Maven ([Descargar Maven](https://maven.apache.org/download.cgi))
-- SQL Server ([Descargar SQL Server Developer](https://www.microsoft.com/es-es/sql-server/sql-server-downloads))
-- SQL Server Management Studio (SSMS) ([Descargar SSMS](https://docs.microsoft.com/es-es/sql/ssms/download-sql-server-management-studio-ssms))
+- Java 17 o superior 
+- Maven 
+- SQL Server 
+- SQL Server Management Studio (SSMS) 
 
 ### 2️⃣ Configurar la Base de Datos en SQL Server
 1. Abre SQL Server Management Studio (SSMS) y conéctate a `localhost\SQLEXPRESS` o la instancia que se este usando par SQL SERVER.
