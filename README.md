@@ -8,8 +8,8 @@ Este proyecto es una aplicación **Java Spring Boot** con **React y Vite** que p
 - Sebastian Vega A01637397
 - Marcela Beatriz De La Rosa Barrios A01637239
 - Ángela Estefanía Aguilar Medina  A01637703
--
--
+- Axel Daniel Padilla Reyes A01642700
+- Diana Nicole Arana Sánchez A01642924
 
 ## 🚀 Video Demostracion
 
