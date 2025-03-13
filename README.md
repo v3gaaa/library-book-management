@@ -7,7 +7,7 @@ Este proyecto es una aplicación **Java Spring Boot** con **React y Vite** que p
 ## 👥 Equipo 42
 - Sebastian Vega A01637397
 - Marcela Beatriz De La Rosa Barrios A01637239
--
+- Ángela Estefanía Aguilar Medina  A01637703
 -
 -
 
