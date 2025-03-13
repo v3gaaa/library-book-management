@@ -1,7 +1,5 @@
 # 📚 Library Book Management System
 
-Este proyecto es una aplicación **Java Spring Boot** con **React y Vite** que permite la gestión de libros de una biblioteca. Utiliza **SQL Server** como base de datos.
-
 ---
 
 ## 👥 Equipo 42
