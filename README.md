@@ -32,6 +32,8 @@ Asegúrate de tener instalado:
 
 ### 2️⃣ Script para ignorar la db
 
+Copiar este codigo dentro de:  backen/src/main/java/com/example/library/config/DatabaseConfig.java
+
 ```java
 package com.example.library.config;
 
