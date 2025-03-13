@@ -4,10 +4,15 @@ import "./styles/SearchComponent.css";
 
 const SearchComponent = ({ setBooks }) => {
   const [query, setQuery] = useState("");
-  const [error, setError] = useState(null); // Estado para errores
+  const [error, setError] = useState(null);
+  const [useMockData, setUseMockData] = useState(false);
 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
+  };
+
+  const toggleDataSource = () => {
+    setUseMockData((prev) => !prev);
   };
 
   useEffect(() => {
@@ -19,22 +24,28 @@ const SearchComponent = ({ setBooks }) => {
 
     const fetchBooks = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/books`, {
-          params: { search: query },
-        });
+        const endpoint = useMockData
+          ? "http://localhost:8080/api/books/mock-books"
+          : "http://localhost:8080/api/books";
+
+        const response = await axios.get(endpoint, { params: { search: query } });
         setBooks(response.data);
         setError(null);
       } catch (err) {
-        setError("Failed to fetch books. Please try again."); //ERROR HANDLING
+        setError("Failed to fetch books. Please try again.");
       }
     };
 
-    const timeoutId = setTimeout(fetchBooks, 500); //DEBOUNCE
+    const timeoutId = setTimeout(fetchBooks, 500); // DEBOUNCE
     return () => clearTimeout(timeoutId);
-  }, [query, setBooks]);
+  }, [query, setBooks, useMockData]);
 
   return (
     <div className="container">
+      <button className="toggle-button" onClick={toggleDataSource}>
+        {useMockData ? "Use Database Data" : "Use Mock Data"}
+      </button>
+
       <input
         type="text"
         placeholder="Search books..."
@@ -42,6 +53,7 @@ const SearchComponent = ({ setBooks }) => {
         value={query}
         onChange={handleInputChange}
       />
+
       {error && <p className="error-message">{error}</p>}
     </div>
   );

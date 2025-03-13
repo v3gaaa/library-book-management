@@ -29,7 +29,6 @@ public class Book {
     @Column(nullable = false)
     private boolean availability = true;
 
-    // Constructores
     public Book() {}
 
     public Book(String title, String author, String genre, Date publishedDate, String isbn, boolean availability) {
@@ -41,7 +40,17 @@ public class Book {
         this.availability = availability;
     }
 
-    // Getters y Setters
+    //const para mock
+    public Book(Integer id, String title, String author, String genre, Date publishedDate, String isbn, boolean availability) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.publishedDate = publishedDate;
+        this.isbn = isbn;
+        this.availability = availability;
+    }
+
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 
